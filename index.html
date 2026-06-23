@@ -1,228 +1,447 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tops Tech | Penyelesaian Teknologi Korporat</title>
-    <style>
-        /* Gaya Asas / Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOP-S TECHNOLOGY | Innovate. Build. Transform.</title>
 
-        body {
-            color: #333;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        /* Navigasi */
-        header {
-            background-color: #0f172a; /* Warna gelap premium/tech */
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+<style>
 
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-        .logo {
-            color: #fff;
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+body{
+background:#050b16;
+color:white;
+overflow-x:hidden;
+}
 
-        .logo span {
-            color: #38bdf8; /* Warna biru tech */
-        }
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(5,11,22,0.85);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
 
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
+.logo{
+font-size:28px;
+font-weight:800;
+color:#d4af37;
+}
 
-        nav ul li {
-            margin-left: 20px;
-        }
+.logo span{
+color:white;
+}
 
-        nav ul li a {
-            color: #cbd5e1;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
+.nav-links a{
+margin-left:30px;
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
 
-        nav ul li a:hover {
-            color: #38bdf8;
-        }
+.nav-links a:hover{
+color:#d4af37;
+}
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-            padding: 180px 20px 100px 20px;
-            text-align: center;
-        }
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 10%;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
+background-size:cover;
+background-position:center;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
+.hero h1{
+font-size:70px;
+font-weight:800;
+line-height:1.1;
+}
 
-        .hero p {
-            font-size: 20px;
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-        }
+.hero h1 span{
+color:#d4af37;
+}
 
-        .btn {
-            display: inline-block;
-            background-color: #38bdf8;
-            color: #0f172a;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
+.hero p{
+margin-top:20px;
+font-size:20px;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+color:#ddd;
+}
 
-        .btn:hover {
-            background-color: #0ea5e9;
-        }
+.btn{
+display:inline-block;
+margin-top:40px;
+padding:15px 40px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+font-weight:700;
+border-radius:50px;
+transition:0.3s;
+}
 
-        /* Seksyen Perkhidmatan (Services) */
-        .services {
-            max-width: 1100px;
-            margin: 80px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
+.btn:hover{
+transform:translateY(-5px);
+}
 
-        .services h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
-            position: relative;
-        }
+section{
+padding:100px 10%;
+}
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+.section-title{
+text-align:center;
+font-size:48px;
+margin-bottom:20px;
+font-weight:800;
+}
 
-        .service-box {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s;
-        }
+.section-sub{
+text-align:center;
+color:#ccc;
+max-width:800px;
+margin:auto;
+margin-bottom:70px;
+}
 
-        .service-box:hover {
-            transform: translateY(-5px);
-        }
+.about-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+}
 
-        .service-box h3 {
-            margin-bottom: 15px;
-            color: #0f172a;
-        }
+.card{
+background:#0c1629;
+padding:40px;
+border-radius:20px;
+border:1px solid rgba(212,175,55,0.15);
+transition:0.4s;
+}
 
-        /* Hubungi Kami */
-        .contact {
-            background-color: #f1f5f9;
-            padding: 80px 20px;
-            text-align: center;
-        }
+.card:hover{
+transform:translateY(-10px);
+border-color:#d4af37;
+}
 
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
+.card h3{
+margin-bottom:15px;
+color:#d4af37;
+}
 
-        /* Footer */
-        footer {
-            background-color: #0f172a;
-            color: #94a3b8;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 14px;
-        }
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
 
-        /* Responsif Ringkas */
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; }
-            nav ul { margin-top: 15px; }
-            .hero h1 { font-size: 36px; }
-        }
-    </style>
+.service-box{
+background:#0c1629;
+padding:35px;
+border-radius:20px;
+text-align:center;
+transition:0.4s;
+}
+
+.service-box:hover{
+transform:translateY(-10px);
+}
+
+.service-box h3{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat{
+background:#0c1629;
+padding:40px;
+text-align:center;
+border-radius:20px;
+}
+
+.stat h2{
+font-size:50px;
+color:#d4af37;
+}
+
+.cta{
+text-align:center;
+background:linear-gradient(135deg,#071225,#0f2240);
+}
+
+.cta h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+footer{
+background:black;
+padding:40px;
+text-align:center;
+color:#999;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.nav-links{
+display:none;
+}
+
+.section-title{
+font-size:34px;
+}
+
+.cta h2{
+font-size:34px;
+}
+
+}
+
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">TOPS<span>TECH</span></div>
-            <nav>
-                <ul>
-                    <li><a href="#utama">Utama</a></li>
-                    <li><a href="#servis">Perkhidmatan</a></li>
-                    <li><a href="#hubungi">Hubungi</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<nav class="navbar">
+<div class="logo">TOP-S <span>TECHNOLOGY</span></div>
 
-    <section class="hero" id="utama">
-        <h1>Penyelesaian Teknologi Untuk Perniagaan Anda</h1>
-        <p>Kami menyediakan perkhidmatan IT yang inovatif, selamat, dan berprestasi tinggi untuk memacu pertumbuhan syarikat anda di era digital.</p>
-        <a href="#hubungi" class="btn">Hubungi Kami Sekarang</a>
-    </section>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-    <section class="services" id="servis">
-        <h2>Perkhidmatan Kami</h2>
-        <div class="services-grid">
-            <div class="service-box">
-                <h3>Pembangunan Perisian</h3>
-                <p>Membina sistem aplikasi tersuai (custom software) mengikut keperluan spesifik perniagaan anda.</p>
-            </div>
-            <div class="service-box">
-                <h3>Sistem Awan & Infrastruktur</h3>
-                <p>Migrasi data ke cloud dan pengurusan server IT yang selamat serta stabil untuk operasi tanpa gangguan.</p>
-            </div>
-            <div class="service-box">
-                <h3>Keselamatan Siber</h3>
-                <p>Melindungi aset digital dan data sensitif syarikat anda daripada ancaman serangan siber luar.</p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
 
-    <section class="contact" id="hubungi">
-        <div class="contact-container">
-            <h2>Hubungi Tops Tech</h2>
-            <p style="margin-bottom: 20px; color: #64748b;">Mempunyai sebarang pertanyaan? E-mel atau hubungi talian kami.</p>
-            <p><strong>E-mel:</strong> info@topstech.com.my</p>
-            <p><strong>Telefon:</strong> +603-XXXX XXXX</p>
-            <p><strong>Alamat:</strong> Kuala Lumpur, Malaysia</p>
-        </div>
-    </section>
+<div>
 
-    <footer>
-        <p>&copy; 2026 Tops Tech. Hak Cipta Terpelihara.</p>
-    </footer>
+<h1>
+ENGINEERING THE <br>
+<span>FUTURE</span>
+</h1>
+
+<p>
+Innovative Engineering, Smart Manufacturing,
+STEM Education, Artificial Intelligence,
+Automation & Technology Solutions.
+</p>
+
+<a href="#contact" class="btn">Contact Us</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About TOP-S TECHNOLOGY</h2>
+
+<p class="section-sub">
+Building technology solutions for industry,
+education and future innovation.
+</p>
+
+<div class="about-grid">
+
+<div class="card">
+<h3>Vision</h3>
+<p>
+To become a world-class technology and engineering company
+developing impactful solutions for industry and society.
+</p>
+</div>
+
+<div class="card">
+<h3>Mission</h3>
+<p>
+Empowering industries through engineering innovation,
+digital transformation and smart technology.
+</p>
+</div>
+
+<div class="card">
+<h3>Core Value</h3>
+<p>
+Innovation, Integrity, Excellence, Sustainability
+and Continuous Improvement.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<p class="section-sub">
+Technology solutions tailored for modern industries.
+</p>
+
+<div class="services">
+
+<div class="service-box">
+<h3>Industrial Engineering</h3>
+<p>
+Jig & Fixture Design, Productivity Improvement,
+Manufacturing Optimization.
+</p>
+</div>
+
+<div class="service-box">
+<h3>Automation Systems</h3>
+<p>
+IoT Monitoring, Smart Factory Solutions,
+ESP32 Development and Automation.
+</p>
+</div>
+
+<div class="service-box">
+<h3>STEM Education</h3>
+<p>
+Robotics, Coding, Engineering Modules,
+Workshops and Innovation Programs.
+</p>
+</div>
+
+<div class="service-box">
+<h3>AI Technology</h3>
+<p>
+Artificial Intelligence Integration,
+Machine Learning and Smart Analytics.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Innovation Projects</h2>
+
+<p class="section-sub">
+Research, development and technology commercialization.
+</p>
+
+<div class="about-grid">
+
+<div class="card">
+<h3>TOP-S HHO System</h3>
+<p>
+Advanced hydrogen generation technology
+for alternative energy research.
+</p>
+</div>
+
+<div class="card">
+<h3>TOP Kids Lab</h3>
+<p>
+STEM ecosystem designed to inspire
+future innovators and engineers.
+</p>
+</div>
+
+<div class="card">
+<h3>Smart Factory</h3>
+<p>
+Industrial digitalization and smart manufacturing solutions.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="stats">
+
+<div class="stat">
+<h2>2026</h2>
+<p>Founded</p>
+</div>
+
+<div class="stat">
+<h2>4</h2>
+<p>Technology Divisions</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Innovation Driven</p>
+</div>
+
+<div class="stat">
+<h2>∞</h2>
+<p>Future Potential</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="cta" id="contact">
+
+<h2>Let's Build The Future Together</h2>
+
+<p>
+TOP-S TECHNOLOGY delivers innovative engineering
+and technology solutions for tomorrow.
+</p>
+
+<a href="mailto:info@tops-technology.com" class="btn">
+Get In Touch
+</a>
+
+</section>
+
+<footer>
+
+<h3>TOP-S TECHNOLOGY</h3>
+
+<p>
+Registration No: 202603148848 (AS0516322-X)
+</p>
+
+<p>
+Innovate • Build • Transform
+</p>
+
+</footer>
 
 </body>
 </html>
